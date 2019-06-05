@@ -1,0 +1,5 @@
+{
+  "presets": ["@babel/env",["minify", {
+    "removeConsole": true
+  }]]
+}

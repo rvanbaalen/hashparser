@@ -1,5 +1,13 @@
 {
   "name": "@rvanbaalen/hashparser",
   "version": "1.0.0",
-  "main": "src/hashparser.js"
+  "main": "src/hashparser.js",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
+    "babel-preset-minify": "^0.5.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0"
+  }
 }
