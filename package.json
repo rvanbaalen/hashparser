@@ -1,6 +1,6 @@
 {
   "name": "@rvanbaalen/hashparser",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "main": "src/hashparser.js",
   "devDependencies": {
     "@babel/core": "^7.4.5",
