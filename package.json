@@ -2,6 +2,7 @@
   "name": "@rvanbaalen/hashparser",
   "version": "1.0.3",
   "main": "src/hashparser.js",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
