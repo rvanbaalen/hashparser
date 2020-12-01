@@ -1,0 +1,24 @@
+on:
+  push:
+    branches:
+      - main
+      
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build JS using Gulp
+    if: github.event.name === 'release'
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - uses: bahmutov/npm-install@v1
+
+    - name: Compile with Gulp
+      # uses: elstudio/actions-js-build/build@v2 # Disable until gulpfile.babel.js support is included via open PR
+      uses: rvanbaalen/actions-js-build/build@master
+
+    - name: Commit changes
+      uses: elstudio/actions-js-build/commit@v3
+      with:
+        commitMessage: compiled package files
