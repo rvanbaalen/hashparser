@@ -1,3 +1,7 @@
+/**
+ * @param key
+ * @returns {RegExp}
+ */
 function hashParserReg(key) {
     return new RegExp("(\#\!|\&)(" + key + "=)(.[^\&]*)");
 }
