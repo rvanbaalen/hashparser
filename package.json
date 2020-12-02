@@ -1,6 +1,6 @@
 {
   "name": "@rvanbaalen/hashparser",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "src/hashparser.js",
   "license": "MIT",
   "devDependencies": {
@@ -9,6 +9,7 @@
     "@babel/register": "^7.4.4",
     "babel-preset-minify": "^0.5.0",
     "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0"
+    "gulp-babel": "^8.0.0",
+    "gulp-minify": "^3.1.0"
   }
 }
