@@ -1,36 +1,69 @@
-/**
- * @param key
- * @returns {RegExp}
- */
-function hashParserReg(key) {
-    return new RegExp("(\#\!|\&)(" + key + "=)(.[^\&]*)");
-}
+export default class HashParser {
+    _encoded;
 
-window.HashParser = {
-    setParameter: function (key, value, encode) {
-        let currentParams = location.hash;
-        encode = !!encode;
-        value = encode ? btoa(JSON.stringify(value)) : encodeURIComponent(value);
-
-        if (currentParams.indexOf(key) > -1) {
-            // Replace the param
-            location.hash = currentParams.replace(hashParserReg(key), "$1$2" + value);
-        } else {
-            // Add the param
-            let glue = (currentParams.substr(0,2) === '#!') ? '&' : '#!';
-            location.hash = currentParams + glue + key + '=' + value;
-        }
-    },
-    getParameter: function (key, decode) {
-        let value = location.hash.match(hashParserReg(key));
-        decode = !!decode;
-
-        if (value !== null) {
-            value = value[value.length - 1];
-        } else {
-            return value;
-        }
-
-        return decode ? JSON.parse(atob(value)) : decodeURIComponent(value);
+    constructor({encoded = false} = {}) {
+        this._encoded = encoded;
+        this.params = new URLSearchParams(window.location.hash.replace(/^#/g, ''));
     }
-};
+
+    static get encoded() {
+        return new HashParser({encoded: true});
+    }
+
+    get encoded() {
+        return new HashParser({encoded: true});
+    }
+
+    // Prefixing with _ to prevent auto-complete from suggesting this method while still
+    // allowing it to be overwritten if this class is extended.
+    _encode(value) {
+        return btoa(JSON.stringify(value));
+    }
+
+    _decode(value) {
+        return JSON.parse(atob(value));
+    }
+
+    get(key, defaultValue) {
+        let value = this.params.get(key);
+        if (value === null) {
+            return defaultValue;
+        }
+
+        if (this._encoded) {
+            return this._decode(value);
+        }
+
+        return decodeURIComponent(value);
+    }
+
+    set(key, value) {
+        value = this._encoded ? this._encode(value) : encodeURIComponent(value);
+        this.params.set(key, value);
+        this.updateHash();
+    }
+
+    delete(key) {
+        this.params.delete(key);
+        this.updateHash();
+    }
+
+    clear() {
+        this.params = new URLSearchParams();
+        this.updateHash();
+    }
+
+    has(key) {
+        return this.params.has(key);
+    }
+
+    updateHash() {
+        if (Array.from(this.params).length === 0) {
+            // Remove the hash from the URL
+            window.history.replaceState(null, null, window.location.pathname + window.location.search);
+            return;
+        }
+
+        window.location.hash = `#${this.params.toString()}`;
+    }
+}

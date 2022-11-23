@@ -1,49 +1,61 @@
-# Hash Parser
-
-Tiny javascript library to get and set (encoded) query parameters in the URL hash
+# HashParser v2.0
 
 ![npm version (scoped)](https://img.shields.io/npm/v/@rvanbaalen/hashparser.svg?style=popout-square) ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/min/@rvanbaalen/hashparser.svg?style=popout-square)
 
-## Usage
+Tiny javascript library to get and set (encoded) query parameters in the URL hash.
 
-Make sure you have included dist/hashparser.js somewhere in your code.
+Version 2.0 is a complete rewrite from version 1.0 and not backwards compatible.
 
-### `HashParser.setParameter(key, value, encode)`
-By default, parameter encoding is turned off.
+**Important note: HashParser assumes that everything after the hash is a query string.**
 
-> Example URL: https://example.com
+HashParser uses `URLSearchParams` to parse and set the query parameters.
 
-```
-HashParser.setParameter('baz', 'bar');
-```
+## Basic usage
 
-> Result URL: https://example.com#!baz=bar
+```js
+import {HashParser} from '@rvanbaalen/hashparser';
 
-## Encoding parameter values to store any type of data in the hash
+const hp = new HashParser();
 
-```
-var greeting = {
-  "hello": "world!"
-};
+// Set a paramter in the hash
+hp.set('foo', 'bar'); // example.com#foo=bar
 
-HashParser.setParameter('greeting', greeting, true);
-```
+// Get a parameter from the hash
+hp.get('foo'); // bar
 
-> Result URL: https://example.com#!greeting=eyJoZWxsbyI6IndvcmxkISJ9
-
-## Retrieving encoded parameters from the hash
-### `HashParser.getParameter(key, decode)`
-By default, parameter decoding is turned off.
-Returns `null` when parameter does not exist.
+// Remove a parameter from the hash
+hp.remove('foo'); // example.com#
 
 ```
-var greeting = HashParser.getParameter('greeting', true);
 
-// var greeting = {
-//   "hello": "world!"
-// };
+## Encoded values
+
+```js
+import {HashParser} from '@rvanbaalen/hashparser';
+
+// Two ways to use encoded parameters
+
+// 1. Via the static getter
+
+// Set a paramter in the hash
+HashParser.encoded.set('foo', 'bar'); // example.com#foo=ImJhciI%3D
+
+// Get a parameter from the hash
+HashParser.encoded.get('foo'); // "bar"
+
+// For reference, a default HashParser instance does not decode values
+const hp = new HashParser();
+hp.get('foo'); // ImJhciI%3D
+
+// 2. Via the instance
+const hp = new HashParser({encoded: true});
+
+hp.set('foo', 'bar'); // example.com#foo=ImJhciI%3D
+hp.get('foo'); // "bar"
 ```
 
-> Make sure to set decoding to true when working with encoded parameters or the raw value will be returned instead of the decoded object.
+### Building
 
-Ignore: **Test update before 2.0**
+Building is done via https://www.digitalocean.com/community/tools/minify
+
+`TODO: Add build script`
