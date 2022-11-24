@@ -1,7 +1,8 @@
 # HashParser v2.0
 
-![npm version (scoped)](https://img.shields.io/npm/v/@rvanbaalen/hashparser.svg?style=popout-square) ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/min/@rvanbaalen/hashparser.svg?style=popout-square)
-![downloads](https://img.shields.io/npm/dt/@rvanbaalen/hashparser.svg?style=popout-square)
+![npm (scoped)](https://img.shields.io/npm/v/@rvanbaalen/hashparser?style=flat-square)
+![npm bundle size (scoped)](https://img.shields.io/bundlephobia/min/@rvanbaalen/hashparser?style=flat-square)
+![downloads](https://img.shields.io/npm/dt/@rvanbaalen/hashparser.svg?style=flat-square)
 
 Tiny javascript library to get and set (encoded) query parameters in the URL hash.
 
