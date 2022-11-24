@@ -7,7 +7,6 @@ export default class HashParser {
     }
 
     static get encoded() {
-        console.log('test');
         return new HashParser({encoded: true});
     }
 
