@@ -8,6 +8,14 @@ Tiny javascript library to get and set (encoded) query parameters in the URL has
 
 ⚠️ Version 2.0 is a complete rewrite from version 1.0 and not backwards compatible.
 
+# Installation
+
+```bash
+npm install @rvanbaalen/hashparser
+```
+
+### Before your get started
+
 ℹ️ **Important note: HashParser assumes that everything after the hash is a query string.**
 
 HashParser uses `URLSearchParams` to parse and set the query parameters.
