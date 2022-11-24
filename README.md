@@ -57,6 +57,11 @@ hp.get('foo'); // "bar"
 
 ### Building
 
-Building is done via https://www.digitalocean.com/community/tools/minify
+Compile the source files to the `dist` folder:
 
-`TODO: Add build script`
+```bash
+npm run build
+```
+
+Upon each commit, `npm run build` is automatically 
+executed and `./dist/hashparser.min.js` is automatically added pre-commit.
