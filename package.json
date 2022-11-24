@@ -1,6 +1,24 @@
 {
   "name": "@rvanbaalen/hashparser",
   "version": "2.0.0",
+  "author": "Robin S. van Baalen",
   "main": "dist/hashparser.min.js",
-  "license": "MIT"
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "node ./terser.js",
+    "git-add": "git add -A ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rvanbaalen/hashparser/git"
+  },
+  "pre-commit": [
+    "build",
+    "git-add"
+  ],
+  "devDependencies": {
+    "pre-commit": "^1.2.2",
+    "terser": "^5.16.0"
+  }
 }
