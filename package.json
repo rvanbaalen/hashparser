@@ -7,7 +7,7 @@
   "type": "module",
   "scripts": {
     "build": "node ./terser.js",
-    "git-add": "git add -A ."
+    "git-add": "git add ./dist/hashparser.min.js ./dist/hashparser.min.js.map"
   },
   "repository": {
     "type": "git",
