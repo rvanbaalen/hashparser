@@ -5,9 +5,9 @@
 
 Tiny javascript library to get and set (encoded) query parameters in the URL hash.
 
-Version 2.0 is a complete rewrite from version 1.0 and not backwards compatible.
+⚠️ Version 2.0 is a complete rewrite from version 1.0 and not backwards compatible.
 
-**Important note: HashParser assumes that everything after the hash is a query string.**
+ℹ️ **Important note: HashParser assumes that everything after the hash is a query string.**
 
 HashParser uses `URLSearchParams` to parse and set the query parameters.
 
