@@ -1,13 +1,15 @@
 {
   "name": "@rvanbaalen/hashparser",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": "Robin S. van Baalen",
   "main": "dist/hashparser.min.js",
   "license": "MIT",
   "type": "module",
   "scripts": {
     "build": "node ./terser.js",
-    "git-add": "git add ./dist/hashparser.min.js ./dist/hashparser.min.js.map"
+    "git-add": "git add ./dist/hashparser.min.js ./dist/hashparser.min.js.map",
+    "postpublish": "npm run publish-npm",
+    "publish-npm": "npm publish --access public --ignore-scripts --@rvanbaalen:registry='https://registry.npmjs.org'"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,8 @@
   "devDependencies": {
     "pre-commit": "^1.2.2",
     "terser": "^5.16.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
