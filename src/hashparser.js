@@ -72,4 +72,4 @@ export default class HashParser {
 
         window.location.hash = `#${this.params.toString()}`;
     }
-}
+} 
