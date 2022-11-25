@@ -2,10 +2,11 @@ export default class HashParser {
     _encoded;
 
     constructor({ encoded = false, sync = true } = {}) {
-        let that = this;
         this._encoded = encoded;
         this._readHash()
-        if(sync) window.addEventListener('hashchange', ()=>{that._readHash()}, false);
+        if (sync) {
+            window.addEventListener('hashchange', () => this._readHash(), false);
+        }
     }
 
     static get encoded() {
