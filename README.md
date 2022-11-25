@@ -1,12 +1,12 @@
 # HashParser v2.0
 
+Tiny javascript library to get and set (encoded) query parameters in the URL hash.
+
 ![npm (scoped)](https://img.shields.io/npm/v/@rvanbaalen/hashparser?style=flat-square)
 ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/min/@rvanbaalen/hashparser?style=flat-square)
 ![downloads](https://img.shields.io/npm/dt/@rvanbaalen/hashparser.svg?style=flat-square)
 
-Tiny javascript library to get and set (encoded) query parameters in the URL hash.
-
-⚠️ Version 2.0 is a complete rewrite from version 1.0 and not backwards compatible.
+⚠️ v2.* is a complete rewrite from version 1.0 and not backwards compatible.
 
 # Installation
 
