@@ -1,9 +1,12 @@
 export default class HashParser {
     _encoded;
 
-    constructor({encoded = false} = {}) {
+    constructor({ encoded = false, sync = true } = {}) {
         this._encoded = encoded;
-        this.params = new URLSearchParams(window.location.hash.replace(/^#/g, ''));
+        this._readHash()
+        if (sync) {
+            window.addEventListener('hashchange', () => this._readHash(), false);
+        }
     }
 
     static get encoded() {
@@ -22,6 +25,10 @@ export default class HashParser {
 
     _decode(value) {
         return JSON.parse(atob(value));
+    }
+
+    _readHash() {
+        this.params = new URLSearchParams(window.location.hash.replace(/^#/g, ''));
     }
 
     get(key, defaultValue) {
@@ -66,4 +73,4 @@ export default class HashParser {
 
         window.location.hash = `#${this.params.toString()}`;
     }
-}
+} 
