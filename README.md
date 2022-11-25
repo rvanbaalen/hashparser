@@ -1,4 +1,4 @@
-# HashParser v2.0
+# HashParser v2
 
 Tiny javascript library to get and set (encoded) query parameters in the URL hash.
 
