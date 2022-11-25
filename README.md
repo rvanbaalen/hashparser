@@ -64,6 +64,17 @@ hp.set('foo', 'bar'); // example.com#foo=ImJhciI%3D
 hp.get('foo'); // "bar"
 ```
 
+## Options
+
+The following options can be passed to a new HashParser instance:
+
+```js
+{
+  encoded: false, // default value is false, set to true to always encode values
+  sync: true // default value is true, this will listen for hashchange events on the window object and update the internal dataset.
+}
+```
+
 ### Building
 
 Compile the source files to the `dist` folder:
