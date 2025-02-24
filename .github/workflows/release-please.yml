@@ -14,7 +14,7 @@ jobs:
     name: 'Check if source files have changed'
     runs-on: ubuntu-latest
     outputs:
-      assets: ${{ steps.filter.outputs.assets }}
+      assets: ${{ steps.filter.outputs.src }}
     steps:
       - uses: actions/checkout@v4
       - id: filter
@@ -25,7 +25,8 @@ jobs:
               - 'src/**'
 
   build-assets:
-    if: steps.changes.outputs.src == 'true'
+    needs: [ filter ]
+    if: needs.filter.outputs.assets == 'true'
     name: Build front-end assets
     runs-on: ubuntu-latest
     steps:
@@ -55,10 +56,7 @@ jobs:
         with:
           config-file: 'release-please-config.json'
           manifest-file: '.release-please-manifest.json'
-      # The logic below handles the npm publication:
       - uses: actions/checkout@v4
-        # these if statements ensure that a publication only occurs when
-        # a new release is created:
         if: ${{ steps.release.outputs.release_created }}
       - uses: actions/setup-node@v4
         with:
@@ -69,5 +67,5 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         if: ${{ steps.release.outputs.release_created }}
