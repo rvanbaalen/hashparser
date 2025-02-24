@@ -3,6 +3,11 @@
   "version": "2.1.0",
   "author": "Robin S. van Baalen",
   "main": "dist/hashparser.min.js",
+  "files": [
+    "dist/hashparser.js",
+    "dist/hashparser.min.js",
+    "dist/hashparser.min.js.map"
+  ],
   "license": "MIT",
   "type": "module",
   "scripts": {
