@@ -25,7 +25,7 @@ jobs:
               - 'src/**'
 
   build-assets:
-    if: ${{ steps.changes.outputs.src == 'true' }}
+    if: steps.changes.outputs.src == 'true'
     name: Build front-end assets
     runs-on: ubuntu-latest
     steps:
