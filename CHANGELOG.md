@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.2](https://github.com/rvanbaalen/hashparser/compare/hashparser-v2.2.1...hashparser-v2.2.2) (2025-02-24)
+
+
+### Bug Fixes
+
+* trigger when the release is published ([18b3736](https://github.com/rvanbaalen/hashparser/commit/18b3736fa545b497e126435f292d582a7b84385b))
+
 ## [2.2.1](https://github.com/rvanbaalen/hashparser/compare/hashparser-v2.2.0...hashparser-v2.2.1) (2025-02-24)
 
 
