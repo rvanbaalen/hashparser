@@ -6,21 +6,16 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "node ./terser.js",
-    "git-add": "git add ./dist/hashparser.min.js ./dist/hashparser.min.js.map",
-    "postpublish": "npm run publish-npm",
-    "publish-npm": "npm publish --access public --ignore-scripts --@rvanbaalen:registry='https://registry.npmjs.org'"
+    "build": "node ./build.js"
+  },
+  "engines": {
+    "node": ">=22"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/rvanbaalen/hashparser.git"
   },
-  "pre-commit": [
-    "build",
-    "git-add"
-  ],
   "devDependencies": {
-    "pre-commit": "^1.2.2",
     "terser": "^5.16.0"
   },
   "publishConfig": {
