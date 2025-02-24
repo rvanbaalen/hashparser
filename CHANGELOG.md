@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.1](https://github.com/rvanbaalen/hashparser/compare/hashparser-v2.2.0...hashparser-v2.2.1) (2025-02-24)
+
+
+### Bug Fixes
+
+* split the workflows ([e2dd3dd](https://github.com/rvanbaalen/hashparser/commit/e2dd3dda075533ecd2bc0f213cb3af57c8797f05))
+
 ## [2.2.0](https://github.com/rvanbaalen/hashparser/compare/hashparser-v2.1.0...hashparser-v2.2.0) (2025-02-24)
 
 
