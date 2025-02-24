@@ -1,8 +1,10 @@
 import { minify } from "terser";
 import * as fs from 'fs';
 
+// Record the start time using process.hrtime()
+const startTime = process.hrtime();
+
 // Define the config for how Terser should minify the code
-// This is set to how you currently have this web tool configured
 const config = {
     compress: {
         dead_code: true,
@@ -37,7 +39,21 @@ const code = fs.readFileSync('./src/hashparser.js', 'utf8');
 const minified = await minify(code, config);
 
 // Save the code!
+fs.writeFileSync('./dist/hashparser.js', code);
+
+// Save the minified code!
 fs.writeFileSync('./dist/hashparser.min.js', minified.code);
 
 // Save the generated sourcemap
 fs.writeFileSync('./dist/hashparser.min.js.map', minified.map);
+
+// Calculate the runtime using process.hrtime()
+const diff = process.hrtime(startTime);
+const runtimeMs = diff[0] * 1000 + diff[1] / 1e6;
+
+// Display the runtime in milliseconds if less than 1000 ms, otherwise in seconds
+if (runtimeMs < 1000) {
+    console.log(`Build completed in ${runtimeMs.toFixed(2)} ms`);
+} else {
+    console.log(`Build completed in ${(runtimeMs / 1000).toFixed(2)} seconds`);
+}
