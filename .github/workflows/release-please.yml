@@ -3,13 +3,50 @@ on:
     branches:
       - main
 
-name: release-please
+name: "Release Please"
 
 permissions:
   contents: write
   pull-requests: write
 
 jobs:
+  filter:
+    name: 'Check if source files have changed'
+    runs-on: ubuntu-latest
+    outputs:
+      assets: ${{ steps.filter.outputs.assets }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: filter
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            src:
+              - 'src/**'
+
+  build-assets:
+    if: ${{ steps.changes.outputs.src == 'true' }}
+    name: Build front-end assets
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: 'package.json'
+      - run: npm ci
+      - run: npm run build --production
+
+      - name: Commit changes
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git add .
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "chore(assets): built front-end assets [skip-ci]" && git push
+          else
+            echo "No changes to commit."
+          fi
+
   release-please:
     runs-on: ubuntu-latest
     steps:
