@@ -11,7 +11,8 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "build": "node ./build.js"
+    "build": "node ./build.js",
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "engines": {
     "node": ">=22"
