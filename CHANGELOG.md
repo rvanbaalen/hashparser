@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.5](https://github.com/rvanbaalen/hashparser/compare/hashparser-v2.2.4...hashparser-v2.2.5) (2025-02-25)
+
+
+### Bug Fixes
+
+* terser is a dev dependency ([dbb53ca](https://github.com/rvanbaalen/hashparser/commit/dbb53caeae4e0c37743d5b16d556fb278f584a83))
+
 ## [2.2.4](https://github.com/rvanbaalen/hashparser/compare/hashparser-v2.2.3...hashparser-v2.2.4) (2025-02-25)
 
 
