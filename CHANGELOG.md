@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.4](https://github.com/rvanbaalen/hashparser/compare/hashparser-v2.2.3...hashparser-v2.2.4) (2025-02-25)
+
+
+### Bug Fixes
+
+* **CI:** publish config ([28aec17](https://github.com/rvanbaalen/hashparser/commit/28aec1795b141721ae8d4cff72c23a66610ed393))
+
 ## [2.2.3](https://github.com/rvanbaalen/hashparser/compare/hashparser-v2.2.2...hashparser-v2.2.3) (2025-02-25)
 
 
