@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.3](https://github.com/rvanbaalen/hashparser/compare/hashparser-v2.2.2...hashparser-v2.2.3) (2025-02-25)
+
+
+### Bug Fixes
+
+* **CI:** revamp release ci ([02fadde](https://github.com/rvanbaalen/hashparser/commit/02fadde70f9d46bbfd9f468806941405c34389a5))
+
 ## [2.2.2](https://github.com/rvanbaalen/hashparser/compare/hashparser-v2.2.1...hashparser-v2.2.2) (2025-02-24)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@rvanbaalen/hashparser",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "author": "Robin S. van Baalen",
   "main": "dist/hashparser.min.js",
   "files": [
