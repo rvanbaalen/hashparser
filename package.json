@@ -21,7 +21,7 @@
     "type": "git",
     "url": "git+ssh://git@github.com/rvanbaalen/hashparser.git"
   },
-  "dependencies": {
+  "devDependencies": {
     "terser": "^5.39.0"
   }
 }
