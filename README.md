@@ -1,12 +1,11 @@
-# HashParser v2
+[&larr; See my other Open Source projects](https://robinvanbaalen.nl)
+
+# @rvanbaalen/hashparser
+![NPM Downloads](https://img.shields.io/npm/d18m/%40rvanbaalen%2Fhashparser)
+![GitHub License](https://img.shields.io/github/license/rvanbaalen/hashparser)
+![NPM Version](https://img.shields.io/npm/v/%40rvanbaalen%2Fhashparser)
 
 Tiny javascript library to get and set (encoded) query parameters in the URL hash.
-
-![npm (scoped)](https://img.shields.io/npm/v/@rvanbaalen/hashparser?style=flat-square)
-![npm bundle size (scoped)](https://img.shields.io/bundlephobia/min/@rvanbaalen/hashparser?style=flat-square)
-![downloads](https://img.shields.io/npm/dt/@rvanbaalen/hashparser.svg?style=flat-square)
-
-⚠️ v2.* is a complete rewrite from version 1.0 and not backwards compatible.
 
 # Installation
 
@@ -14,16 +13,10 @@ Tiny javascript library to get and set (encoded) query parameters in the URL has
 npm install @rvanbaalen/hashparser
 ```
 
-### Before your get started
-
-ℹ️ **Important note: HashParser assumes that everything after the hash is a query string.**
-
-HashParser uses `URLSearchParams` to parse and set the query parameters.
-
 ## Basic usage
 
 ```js
-import {HashParser} from '@rvanbaalen/hashparser';
+import { HashParser } from '@rvanbaalen/hashparser';
 
 const hp = new HashParser();
 
