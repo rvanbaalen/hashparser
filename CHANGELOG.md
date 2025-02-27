@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/rvanbaalen/hashparser/compare/hashparser-v3.0.0...hashparser-v3.0.1) (2025-02-27)
+
+
+### Bug Fixes
+
+* only run tests if source has changed ([8a98939](https://github.com/rvanbaalen/hashparser/commit/8a989390be11527a2fdc9902719118085c84146c))
+
 ## [3.0.0](https://github.com/rvanbaalen/hashparser/compare/hashparser-v2.2.4...hashparser-v3.0.0) (2025-02-27)
 
 
