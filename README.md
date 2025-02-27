@@ -4,6 +4,7 @@
 ![NPM Downloads](https://img.shields.io/npm/d18m/%40rvanbaalen%2Fhashparser)
 ![GitHub License](https://img.shields.io/github/license/rvanbaalen/hashparser)
 ![NPM Version](https://img.shields.io/npm/v/%40rvanbaalen%2Fhashparser)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/rvanbaalen/hashparser/npm-run-tests.yml?label=run%20tests)
 
 Tiny javascript library to get and set (encoded) query parameters in the URL hash.
 
