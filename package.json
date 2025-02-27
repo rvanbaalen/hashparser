@@ -1,27 +1,39 @@
 {
   "name": "@rvanbaalen/hashparser",
+  "type": "module",
   "version": "2.2.4",
   "author": "Robin S. van Baalen",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/rvanbaalen/hashparser.git"
+  },
   "main": "dist/hashparser.min.js",
   "files": [
     "dist/hashparser.js",
     "dist/hashparser.min.js",
     "dist/hashparser.min.js.map"
   ],
-  "license": "MIT",
-  "type": "module",
-  "scripts": {
-    "build": "node ./build.js",
-    "test": "echo \"Error: no test specified\" && exit 0"
-  },
   "engines": {
     "node": ">=22"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/rvanbaalen/hashparser.git"
+  "scripts": {
+    "build": "vite build",
+    "test": "vitest tests/hashparser.test.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
-    "terser": "^5.39.0"
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rvanbaalen/eslint-config": "^1.0.2",
+    "eslint": "^9.21.0",
+    "jsdom": "^26.0.0",
+    "vite": "^6.1.1",
+    "vitest": "^3.0.7"
+  },
+  "overrides": {
+    "vite": {
+      "esbuild": "^0.25.0"
+    }
   }
 }
