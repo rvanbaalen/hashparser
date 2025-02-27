@@ -1,5 +1,24 @@
 # Changelog
 
+## [3.0.0](https://github.com/rvanbaalen/hashparser/compare/hashparser-v2.2.4...hashparser-v3.0.0) (2025-02-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* no sourcemap anymore
+
+### Features
+
+* allow for both named and unnamed export ([eb719c7](https://github.com/rvanbaalen/hashparser/commit/eb719c748aa125a5e8eabbdefd999caa776aed73))
+* introduce new build system using vite ([557e43b](https://github.com/rvanbaalen/hashparser/commit/557e43b5c388ca6845655685e3944e89253acbe5))
+* newly built source files with vite ([fed7fa5](https://github.com/rvanbaalen/hashparser/commit/fed7fa55e3cdd8eb79d1b199f87365ce36f5f140))
+* no sourcemap anymore ([d389097](https://github.com/rvanbaalen/hashparser/commit/d38909727664207a83d102ef19fb58ff38191f77))
+
+
+### Bug Fixes
+
+* terser is a dev dependency ([dbb53ca](https://github.com/rvanbaalen/hashparser/commit/dbb53caeae4e0c37743d5b16d556fb278f584a83))
+
 ## [2.2.4](https://github.com/rvanbaalen/hashparser/compare/hashparser-v2.2.3...hashparser-v2.2.4) (2025-02-25)
 
 
