@@ -30,6 +30,8 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
       - run: npm ci
         if: ${{ steps.release.outputs.release_created }}
+      - run: npm run test
+        if: ${{ steps.release.outputs.release_created }}
       - run: npm run build --production
         if: ${{ steps.release.outputs.release_created }}
       - run: npm publish
