@@ -16,8 +16,8 @@ jobs:
       - uses: googleapis/release-please-action@v4
         id: release
         with:
-          config-file: 'release-please-config.json'
-          manifest-file: '.release-please-manifest.json'
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
       # The logic below handles the npm publication:
       - uses: actions/checkout@v4
         # these if statements ensure that a publication only occurs when
@@ -25,7 +25,7 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
       - uses: actions/setup-node@v4
         with:
-          node-version-file: 'package.json'
+          node-version-file: package.json
           registry-url: 'https://registry.npmjs.org'
         if: ${{ steps.release.outputs.release_created }}
       - run: npm ci
