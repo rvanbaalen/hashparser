@@ -1,5 +1,6 @@
 {
   "name": "@rvanbaalen/hashparser",
+  "description": "A lightweight JavaScript library for managing (encoded) URL hash parameters.",
   "type": "module",
   "version": "3.0.1",
   "author": "Robin S. van Baalen",
@@ -26,9 +27,11 @@
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
     "@rvanbaalen/eslint-config": "^1.0.2",
+    "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/vite": "^4.0.15",
     "eslint": "^9.21.0",
     "jsdom": "^26.0.0",
-    "vite": "^6.1.1",
+    "vite": "^6.2.2",
     "vitest": "^3.0.7"
   },
   "overrides": {
