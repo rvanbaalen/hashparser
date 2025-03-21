@@ -6,15 +6,19 @@
 ![NPM Version](https://img.shields.io/npm/v/%40rvanbaalen%2Fhashparser)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/rvanbaalen/hashparser/npm-run-tests.yml?label=run%20tests)
 
+## Description
+
 Tiny javascript library to get and set (encoded) query parameters in the URL hash.
 
-# Installation
+## Installation
 
 ```bash
 npm install @rvanbaalen/hashparser
 ```
 
-## Basic usage
+## Usage
+
+### Basic usage
 
 ```js
 import { HashParser } from '@rvanbaalen/hashparser';
@@ -32,7 +36,7 @@ hp.remove('foo'); // example.com#
 
 ```
 
-## Encoded values
+### Encoded values
 
 ```js
 import {HashParser} from '@rvanbaalen/hashparser';
@@ -58,7 +62,7 @@ hp.set('foo', 'bar'); // example.com#foo=ImJhciI%3D
 hp.get('foo'); // "bar"
 ```
 
-## Options
+### Options
 
 The following options can be passed to a new HashParser instance:
 
@@ -69,7 +73,7 @@ The following options can be passed to a new HashParser instance:
 }
 ```
 
-### Building
+## Building
 
 Compile the source files to the `dist` folder:
 
@@ -79,3 +83,11 @@ npm run build
 
 Upon each commit, `npm run build` is automatically 
 executed and `./dist/hashparser.min.js` is automatically added pre-commit.
+
+## Contributing
+
+Contributions are welcome! Please feel free to [open an issue](https://github.com/rvanbaalen/hashparser/issues) or [submit a pull request](https://github.com/rvanbaalen/hashparser/pulls).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/rvanbaalen/hashparser/blob/main/LICENSE) file for details.
