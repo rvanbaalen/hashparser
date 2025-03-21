@@ -9,6 +9,13 @@
     "type": "git",
     "url": "git+ssh://git@github.com/rvanbaalen/hashparser.git"
   },
+  "keywords": [
+    "javascript",
+    "hash",
+    "url",
+    "parser",
+    "util"
+  ],
   "main": "dist/hashparser.min.js",
   "files": [
     "dist/hashparser.js",
