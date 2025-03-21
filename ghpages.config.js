@@ -3,6 +3,7 @@ import tailwindcss from "@tailwindcss/vite"
 import { defineConfig } from "vite"
 
 export default defineConfig({
+  base: "/hashparser/", // Change this if your page is not hosted at a root URL
   plugins: [
     tailwindcss(),
   ],
