@@ -2,7 +2,7 @@
   "name": "@rvanbaalen/hashparser",
   "description": "A lightweight JavaScript library for managing (encoded) URL hash parameters.",
   "type": "module",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "author": "Robin S. van Baalen",
   "license": "MIT",
   "repository": {
