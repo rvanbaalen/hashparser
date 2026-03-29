@@ -1,5 +1,13 @@
 # Changelog
 
+## [3.0.4](https://github.com/rvanbaalen/hashparser/compare/hashparser-v3.0.3...hashparser-v3.0.4) (2026-03-29)
+
+
+### Bug Fixes
+
+* resolve broken GitHub links, unresolved OG meta tags, and wrong OG image ([3f93f69](https://github.com/rvanbaalen/hashparser/commit/3f93f695c643dd676afe2c9cfc46e7bccf1a0407))
+* use HTTPS repository URL to fix broken GitHub links on project page ([3fdc2be](https://github.com/rvanbaalen/hashparser/commit/3fdc2bec10938f0d890d819df64624a2c7560b47))
+
 ## [3.0.3](https://github.com/rvanbaalen/hashparser/compare/hashparser-v3.0.2...hashparser-v3.0.3) (2026-03-29)
 
 
