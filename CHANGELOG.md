@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.3](https://github.com/rvanbaalen/hashparser/compare/hashparser-v3.0.2...hashparser-v3.0.3) (2026-03-29)
+
+
+### Bug Fixes
+
+* update base path for custom domain ([17a12db](https://github.com/rvanbaalen/hashparser/commit/17a12db203681c130842a52719110cd1d7a34fae))
+
 ## [3.0.2](https://github.com/rvanbaalen/hashparser/compare/hashparser-v3.0.1...hashparser-v3.0.2) (2025-03-21)
 
 
